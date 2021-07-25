@@ -17,8 +17,7 @@ public class UserAction {
      * @return
      */
     public String login (){
-        System.out.println("username:"+username);
-        System.out.println("password:"+password);
+
         Msg msg =new Msg();
         msg.setType(Msg.SUCCESS);
         msg.setMsg("登录成功");
