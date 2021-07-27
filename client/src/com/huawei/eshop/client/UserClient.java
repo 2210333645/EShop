@@ -39,12 +39,12 @@ public class UserClient  extends Client{
 //       3. 解析消息字符串,提示用户信息
         Msg msg = JsonUtil.Json2Entity(result, Msg.class);
         if(msg.getType().equals(Msg.SUCCESS)){
-            System.out.println("登录成功");
+            System.out.println(msg.getMsg());
             //        4. 页面跳转,使用字符串常量作为跳转标记
             //        成功:返回上一次操作的页面
             return HISTORY;
         }else  {
-            System.out.println("登录失败");
+            System.out.println(msg.getMsg());
             //        失败:返回登录页面
             return LOGIN;
         }
