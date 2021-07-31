@@ -1,9 +1,9 @@
-package com.huawei.eshop.user;
+package com.huawei.eshop.action;
 
 import com.huawei.eshop.common.entity.Msg;
 import com.huawei.eshop.common.util.JsonUtil;
 import com.huawei.eshop.entity.User;
-import com.huawei.eshop.impl.Userserviseimpl;
+import com.huawei.eshop.servise.impl.Userserviseimpl;
 import com.huawei.eshop.servise.UserServise;
 
 /**

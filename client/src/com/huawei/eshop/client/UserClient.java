@@ -1,7 +1,7 @@
 package com.huawei.eshop.client;
 import com.huawei.eshop.common.entity.Msg;
 import com.huawei.eshop.common.util.JsonUtil;
-import  com.huawei.eshop.user.UserAction;
+import  com.huawei.eshop.action.UserAction;
 import java.util.Scanner;
 
 public class UserClient  extends Client{

@@ -1,7 +1,8 @@
 package com.huawei.eshop.common.util;
 
-import com.huawei.eshop.common.entity.Entity;
 import com.alibaba.fastjson.JSON;
+import com.huawei.eshop.common.entity.Entity;
+import com.huawei.eshop.entity.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +33,19 @@ public class JsonUtil {
         System.out.println("---------------");
         List<Entity> entityList1 = JsonUtil.JSONArrary2Entity("[{\"createTime\":\"22:16\",\"id\":\"100\",\"idDel\":\"1\"},{\"createTime\":\"22:18\",\"id\":\"110\",\"idDel\":\"1\"}]", Entity.class);
         System.out.println(entityList1.get(1).getCreateTime());
+
+        User user = new User();
+        user.setUsername("admin");
+        user.setPassword("1234");
+        User user1 = new User();
+        user1.setUsername("play1");
+        user1.setPassword("1234");
+
+
+        List<Entity> userList = new ArrayList<>();
+        userList.add(user);
+        userList.add(user1);
+        System.out.println(JsonUtil.entityListJson(userList));
     }
 
     /**
