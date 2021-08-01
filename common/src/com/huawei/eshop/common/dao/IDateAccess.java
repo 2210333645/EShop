@@ -1,5 +1,7 @@
 package com.huawei.eshop.common.dao;
 
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.List;
 
 /**
@@ -8,4 +10,8 @@ import java.util.List;
  */
 public interface IDateAccess {
       <T> List<T> getList(Class<T> clazz) throws  Exception;
+
+      void writeloginlog(Class clazz,String log) throws URISyntaxException, IOException;
+
+
 }

@@ -22,4 +22,15 @@ public class TXTDataAccess implements IDateAccess {
         return JsonUtil.JSONArrary2Entity(s, clazz);
 
     }
+
+    @Override
+    public void writeloginlog(Class clazz,String log) throws URISyntaxException, IOException {
+        String userName = clazz.getSimpleName().toLowerCase();
+        String dataFileName = "db_"+userName+".txt";
+
+        String dataFilename = "db/"+dataFileName;
+
+        FileUtil.writeBybuffered(dataFilename,log);
+
+    }
 }

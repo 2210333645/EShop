@@ -1,16 +1,17 @@
 package com.huawei.eshop.action;
 
+import com.huawei.eshop.common.action.BaseAction;
 import com.huawei.eshop.common.entity.Msg;
 import com.huawei.eshop.common.util.JsonUtil;
 import com.huawei.eshop.entity.User;
-import com.huawei.eshop.servise.impl.Userserviseimpl;
 import com.huawei.eshop.servise.UserServise;
+import com.huawei.eshop.servise.impl.Userserviseimpl;
 
 /**
  * user控制类，所有的用户操作的控制类
  * 返回json字符串 msg类
  */
-public class UserAction {
+public class UserAction extends BaseAction {
 
     private String username ;
     private String password ;
@@ -47,11 +48,15 @@ public class UserAction {
             if (user != null){
                 msg.setType(Msg.SUCCESS);
                 msg.setMsg("登录成功");
+//                iSysLog.info(username+"用户登录成功");
+
+
+                txtLog.info(username+"用户登录成功");
 
             }else{
                 msg.setType(Msg.FAIL);
                 msg.setMsg("用户名或密码不正确");
-
+                txtLog.warn(username+"用户名或密码不正确");
             }
             return JsonUtil.entity2json(msg);
 
