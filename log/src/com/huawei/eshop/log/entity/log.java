@@ -44,9 +44,9 @@ public class log {
     @Override
     public String toString() {
         return
-                "level=:" + level  +
-                ", msg=:" + msg  +
-                ", time=:" + time
+                "level=" + level  +
+                ", msg=" + msg  +
+                ", time=" + time
                 ;
     }
 }
