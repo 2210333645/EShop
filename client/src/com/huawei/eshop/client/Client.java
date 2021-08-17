@@ -22,6 +22,8 @@ public class Client {
         String result =  userClient.ShowLogin();
         if (result.equals(INDEX)){
             System.out.println("这里是首页");
+            GoodsClient userclent1 = new GoodsClient();
+            userclent1.showGoodlist();
         }else if (result.equals(HISTORY)){
             System.out.println("这里是历史页面");
         }else if (result.equals(LOGIN)){
