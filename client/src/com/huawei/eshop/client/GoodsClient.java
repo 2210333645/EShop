@@ -5,6 +5,8 @@ import com.huawei.eshop.common.util.JsonUtil;
 import com.huawei.eshop.goods.action.GoodsAction;
 import com.huawei.eshop.goods.entity.Goods;
 
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.List;
 
 /**
@@ -18,7 +20,7 @@ import java.util.List;
 
 public class GoodsClient extends Client{
 
-    public void showGoodlist(){
+    public void showGoodlist() throws URISyntaxException, IOException {
     //1.向后台发送请求,获取商品数据
         GoodsAction goodsAction = new GoodsAction();
         String goodlist = goodsAction.getGoodlist();
