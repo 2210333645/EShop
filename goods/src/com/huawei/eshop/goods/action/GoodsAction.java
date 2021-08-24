@@ -3,6 +3,11 @@ package com.huawei.eshop.goods.action;
 import com.huawei.eshop.common.action.BaseAction;
 import com.huawei.eshop.common.entity.Msg;
 import com.huawei.eshop.common.util.JsonUtil;
+import com.huawei.eshop.goods.entity.Goods;
+import com.huawei.eshop.goods.service.GoodsService;
+import com.huawei.eshop.goods.service.impl.GoodsServiceImpl;
+
+import java.util.List;
 
 
 /**
@@ -17,16 +22,32 @@ import com.huawei.eshop.common.util.JsonUtil;
 
 public class GoodsAction extends BaseAction {
 
+    Goods goods;
+    private GoodsService goodsService;
+    public GoodsAction(){
+
+        goodsService = new GoodsServiceImpl();
+
+    }
     public String getGoodlist(){
         //获取商品列表
         Msg msg = new Msg();
+
+        List<Goods> doodsList = goodsService.getDoodsList();
+
+        msg.setObj(doodsList);
+        msg.setType(Msg.SUCCESS);
+
         return JsonUtil.entity2json(msg);
 
     }
 
     public String getGoodsDetail(){
 
-        return null;
+        Msg msg = new Msg();
+
+
+        return JsonUtil.entity2json(msg);
     }
 
 }
