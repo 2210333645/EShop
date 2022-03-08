@@ -6,7 +6,11 @@ import java.util.List;
 
 public interface GoodsService {
 
-    public List<Goods> getDoodsList();
+
+
+    public List<Goods> getDoodsList() throws Exception;
+
+
 
     public Goods getGoodsDetail();
 

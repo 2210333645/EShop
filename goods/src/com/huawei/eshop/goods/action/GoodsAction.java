@@ -7,8 +7,6 @@ import com.huawei.eshop.goods.entity.Goods;
 import com.huawei.eshop.goods.service.GoodsService;
 import com.huawei.eshop.goods.service.impl.GoodsServiceImpl;
 
-import java.io.IOException;
-import java.net.URISyntaxException;
 import java.util.List;
 
 
@@ -31,7 +29,7 @@ public class GoodsAction extends BaseAction {
         goodsService = new GoodsServiceImpl();
 
     }
-    public String getGoodlist() throws URISyntaxException, IOException {
+    public String getGoodlist() throws Exception {
         //获取商品列表
         Msg msg = new Msg();
 

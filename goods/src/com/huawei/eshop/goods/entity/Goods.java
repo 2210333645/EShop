@@ -9,6 +9,14 @@ public class Goods  extends Entity {
     private String nub;
     private String brand;
 
+    public Goods(String name, String price, String nub, String brand) {
+        this.name = name;
+        this.price = price;
+        this.nub = nub;
+        this.brand = brand;
+    }
+
+
     public String getName() {
         return name;
     }

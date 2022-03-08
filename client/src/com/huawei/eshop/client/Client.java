@@ -1,8 +1,5 @@
 package com.huawei.eshop.client;
 
-import java.io.IOException;
-import java.net.URISyntaxException;
-
 /**
  * 所有客户端的公共父类
  * 处理公共的用户操作
@@ -15,12 +12,12 @@ public class Client {
     /** 全局操作 首页*/
     public static final String INDEX = "I";
 
-    public static void main(String[] args) throws URISyntaxException, IOException {
+    public static void main(String[] args) throws Exception {
         Client client = new Client();
         client.start();
 
     }
-    public void start() throws URISyntaxException, IOException {
+    public void start() throws Exception {
         UserClient userClient = new UserClient();
         String result =  userClient.ShowLogin();
         if (result.equals(INDEX)){

@@ -2,7 +2,7 @@ package com.huawei.eshop.common.util;
 
 import com.alibaba.fastjson.JSON;
 import com.huawei.eshop.common.entity.Entity;
-import com.huawei.eshop.entity.User;
+import com.huawei.eshop.goods.entity.Goods;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,38 +14,51 @@ public class JsonUtil {
 
     public static void main(String[] args) {
 
-        Entity entity = new Entity();
-        entity.setId("100");
-        entity.setCreateTime("22:16");
-        String s = JsonUtil.entity2json(entity);
-        System.out.println(s);//{"createTime":"22:16","id":"100","idDel":"1"}
+//        Entity entity = new Entity();
+//        entity.setId("100");
+//        entity.setCreateTime("22:16");
+//        String s = JsonUtil.entity2json(entity);
+//        System.out.println(s);//{"createTime":"22:16","id":"100","idDel":"1"}
+//
+//        System.out.println("---------------");
+//        List<Entity> entityList = new ArrayList<>();
+//        entityList.add(entity);
+//        String entityListJson = JsonUtil.entityListJson(entityList);
+//        System.out.println(entityListJson);//[{"createTime":"22:16","id":"100","idDel":"1"}]
+//
+//        System.out.println("---------------");
+//        Entity entity1 = JsonUtil.Json2Entity("{\"createTime\":\"22:16\",\"id\":\"100\",\"idDel\":\"1\"}", Entity.class);
+//        System.out.println(entity1.getCreateTime());
+//
+//        System.out.println("---------------");
+//        List<Entity> entityList1 = JsonUtil.JSONArrary2Entity("[{\"createTime\":\"22:16\",\"id\":\"100\",\"idDel\":\"1\"},{\"createTime\":\"22:18\",\"id\":\"110\",\"idDel\":\"1\"}]", Entity.class);
+//        System.out.println(entityList1.get(1).getCreateTime());
+//
+//        User user = new User();
+//        user.setUsername("admin");
+//        user.setPassword("1234");
+//        User user1 = new User();
+//        user1.setUsername("play1");
+//        user1.setPassword("1234");
+//
+//
+//        List<Entity> userList = new ArrayList<>();
+//        userList.add(user);
+//        userList.add(user1);
 
-        System.out.println("---------------");
-        List<Entity> entityList = new ArrayList<>();
-        entityList.add(entity);
-        String entityListJson = JsonUtil.entityListJson(entityList);
-        System.out.println(entityListJson);//[{"createTime":"22:16","id":"100","idDel":"1"}]
-
-        System.out.println("---------------");
-        Entity entity1 = JsonUtil.Json2Entity("{\"createTime\":\"22:16\",\"id\":\"100\",\"idDel\":\"1\"}", Entity.class);
-        System.out.println(entity1.getCreateTime());
-
-        System.out.println("---------------");
-        List<Entity> entityList1 = JsonUtil.JSONArrary2Entity("[{\"createTime\":\"22:16\",\"id\":\"100\",\"idDel\":\"1\"},{\"createTime\":\"22:18\",\"id\":\"110\",\"idDel\":\"1\"}]", Entity.class);
-        System.out.println(entityList1.get(1).getCreateTime());
-
-        User user = new User();
-        user.setUsername("admin");
-        user.setPassword("1234");
-        User user1 = new User();
-        user1.setUsername("play1");
-        user1.setPassword("1234");
 
 
-        List<Entity> userList = new ArrayList<>();
-        userList.add(user);
-        userList.add(user1);
-        System.out.println(JsonUtil.entityListJson(userList));
+
+        List<Entity> goodsList = new ArrayList<>() ;
+        Goods goods1 =new Goods("苹果","20","100","阿里巴巴");
+        Goods goods2 =new Goods("香蕉","10","1000","百果园");
+        Goods goods3 =new Goods("菠萝","30","10","农家产");
+
+        goodsList.add(goods1);
+        goodsList.add(goods2);
+        goodsList.add(goods3);
+
+        System.out.println(JsonUtil.entityListJson(goodsList));
     }
 
     /**
