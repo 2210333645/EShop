@@ -1,0 +1,7 @@
+level=WARN, msg=gd用户名或密码不正确, time=20220308211054
+level=WARN, msg=gd用户名或密码不正确, time=20220308211107
+level=info, msg=admin用户登录成功, time=20220308211248
+level=info, msg=获取商品列表, time=20220308211248
+level=info, msg=admin用户登录成功, time=20220308221600
+level=info, msg=admin用户登录成功, time=20220308221713
+level=info, msg=admin用户登录成功, time=20220308234049

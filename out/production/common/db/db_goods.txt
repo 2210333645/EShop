@@ -1,0 +1,1 @@
+[{"brand":"阿里巴巴","idDel":"1","name":"苹果","nub":"100","price":"20"},{"brand":"百果园","idDel":"1","name":"香蕉","nub":"1000","price":"10"},{"brand":"农家产","idDel":"1","name":"菠萝","nub":"10","price":"30"}]
